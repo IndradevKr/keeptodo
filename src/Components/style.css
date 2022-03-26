@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400&family=Vollkorn:wght@400;500;600;800;900&display=swap');
+:root {
+  --primary-dark : #7D5A5A;
+  --secondary-dark: #F1D1D1;
+  --primary-light: #FAF2F2;
+  --secondary-light: #F3E1E1;
+
+  --vollkorn-font: 'Vollkorn', serif;
+  --josefin-sans: 'Josefin Sans', sans-serif;
+  --poppins-font: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--primary-light);
+    font-family: var(--poppins-font);
+    overflow-x: hidden;
+    background-image: url("https://transparenttextures.com/patterns/gray-floral.png");
+}
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* -----------Header Section---------------- */
+.header{
+    background-color: var(--secondary-dark);
+    height: 5rem;
+    width: 100%;
+    display: block;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+.brand__name{
+    font-family: var(--vollkorn-font);
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    color: var(--primary-dark);
+    padding-left: 1rem;
+    text-shadow: 2px 2px 2px var(--secondary-dark); 
+}
+.know-about {
+    margin-top: 2.5rem;
+    font-family: var(--josefin-sans);
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--primary-dark);
+    margin-right: 1rem;
+}
+@media (max-width: 600px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav{
+        width: 100%;
+    }
+    .brand__name{
+        font-size: 1.8rem;
+        margin-top: 2rem;
+    }
+    .know-about{
+        letter-spacing: 0.5px;
+        font-size: 0.8rem;
+        word-wrap: break-word;
+        margin-left: 0.2rem;
+        margin-right: 0.2rem;
+    }
+}
+/* -----------End of Header Section---------------- */
+
+/* -----------Footer------------- */
+.footer{
+    margin-top: 1rem;
+    position: fixed;
+    bottom: 0;
+    padding-left: 1rem;
+    text-align: center; 
+    width: 100%;
+}
+.copyright{
+    color: var(--primary-dark);
+    font-weight: bold;
+}
+@media (max-width: 600px){
+    .copyright{
+        font-size: 0.8rem;
+        font-weight:300;
+    }
+}
+/* -----------End of Footer------------- */
+
+/* ----------Note.jsx------------ */
+.note-container{
+    margin: 0.5rem;
+    margin-bottom: 2rem;
+}
+.note-box {
+    display: inline-block;
+    width: 23%;
+    height: auto;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin: 0.5rem ;
+    background-color: #F8DE7E;
+}
+.note__title{
+    font-family: var(--josefin-sans);
+    font-weight: bold;
+    border-bottom: 1px solid var(--primary-dark);
+}
+.delete-box{
+    display: flex;
+    justify-content: end;
+}
+button.delete__button{
+    padding: 0.3rem;
+    position: relative;
+    top: 1.3rem;
+    border-radius: 0.8rem; 
+    background-color: var(--secondary-light);
+}
+button.delete__button:hover{
+    background-color: var(--primary-light);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+@media (max-width: 900px){
+    .note-box{
+        width: 45%;
+    }
+}
+/* ----------End of Note.jsx------------ */
+
+/* ---------CreateNote.jsx------------- */
+.form-container{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.create-note-form{
+    width: 80%;
+    border-radius: 1rem;
+    box-shadow: 10px 10px 5px 2px var(--secondary-dark);
+    -webkit-box-shadow: 5px 6px 5px 2px var(--secondary-dark);
+    -moz-box-shadow: 5px 6px 5px 2px var(--secondary-dark);
+}
+
+label{
+    font-family: var(--josefin-sans);
+    font-size: 1.2rem;
+}
+input#note-title{
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    padding: 0.6rem;
+    font-size: 1rem;
+    border: 1px dotted var(--secondary-dark); 
+    margin-bottom: 1rem; 
+}
+input#note-title:focus, textarea#note-content:focus{
+    background-color: var(--secondary-light);
+    color: var(--primary-dark);
+    border: 1px solid var(--secondary-dark);
+    border-radius: 0.5rem;
+}
+textarea#note-content{
+    border: 1px dotted var(--secondary-dark);
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 1rem;
+    color:  var(--primary-dark);
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.button-container{
+    display: flex;
+    justify-content: end;
+    padding-right: 0.5rem;
+}
+button#add-button{
+    padding: 0.6rem;
+    font-weight: bold;
+    border-radius: 0.6rem;
+    font-size: 0.8rem;
+    background-color: var(--secondary-light);
+    color: var(--primary-dark);
+    font-family: var(--josefin-sans);
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+button#add-button:hover{
+    background-color: var(--secondary-light);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+/* ---------End of CreateNote.jsx------------- */
