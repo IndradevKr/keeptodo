@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/keeptodo/static/css/main.3f535d02.css",
+    "main.js": "/keeptodo/static/js/main.21a7eb02.js",
+    "static/js/787.44543720.chunk.js": "/keeptodo/static/js/787.44543720.chunk.js",
+    "index.html": "/keeptodo/index.html",
+    "main.3f535d02.css.map": "/keeptodo/static/css/main.3f535d02.css.map",
+    "main.21a7eb02.js.map": "/keeptodo/static/js/main.21a7eb02.js.map",
+    "787.44543720.chunk.js.map": "/keeptodo/static/js/787.44543720.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3f535d02.css",
+    "static/js/main.21a7eb02.js"
+  ]
+}
